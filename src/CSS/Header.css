@@ -1,0 +1,37 @@
+#header-container{
+    height: 60px;
+    width: auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+#header-container>span{
+    line-height: 60px;
+    color: rgb(104, 104, 104);
+}
+#header-container>span:nth-child(2)::before{
+    content: '  ';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+#header-container>input{
+    /* float: right; */
+    width: 170px;
+    height: 25px;
+    padding: 0 25px 0 10px;
+    border-radius: 5px;
+    position: relative;
+    right: -60%;
+    outline: none;
+    border: none;
+    background: rgba(151, 151, 151, 0.384);
+
+}
+#header-container>span:nth-child(4){
+    float: right;
+    color: white;
+    padding: 0 30px;
+    background-color: rgb(62, 125, 241);
+}
+
+

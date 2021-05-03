@@ -10,7 +10,6 @@ class Navbar extends Component{
      * @param {表行号} id 
     */
     showDetail(id) {
-        console.log('showDetail')
         var elementId = document.getElementById(id);
         var showEle = elementId.getAttribute("data-show");
         if (showEle == 'true') {
