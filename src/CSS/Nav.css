@@ -1,0 +1,53 @@
+
+#nav-container{
+    width: 200px;
+    height: 700PX;
+    border-radius: 3px;
+    background-color: #fff;
+    /* overflow: hidden; */
+}
+.nav-header{
+    width: 199px;
+    height: 60px;
+    background: url('../IMG//avengers_gaitubao_169x60.png') no-repeat;
+    background-position-x: 15px;
+    margin-bottom: 10px;
+}
+.nav-g:active{
+    color: white;
+    background-color: rgb(62, 125, 241);
+}
+.nav-g{
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    color: rgb(104, 104, 104);
+    text-decoration: none;
+}
+.nav-g::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+.nav-g::after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    float: right;
+    position: relative;
+    left: -20px;
+    bottom: -20px;
+    transform: rotate(-90deg);
+    background-image: url('../IMG/arrow-down_25x25.png');
+}
+
+.nav-d{
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    line-height: 60px;
+    color: rgb(104, 104, 104);
+    text-decoration: none;
+}
