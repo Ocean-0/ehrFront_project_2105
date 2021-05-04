@@ -31,23 +31,24 @@ class Navbar extends Component{
                 <div className="nav-column">
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"01")}>首页</Link>                
                     <div id="01" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d">首页</Link>    
+                        <Link to='/home' className="nav-d-c">首页</Link>    
+                        <Link to='/home' className="nav-d-c">首页</Link>    
                     </div>
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"02")}>信息查询</Link>                
                     <div id="02" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d">首页</Link>    
+                        <Link to='/home' className="nav-d-c">首页</Link>    
                     </div>
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"03")}>个人信息</Link>                
                     <div id="03" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d">首页</Link>    
+                        <Link to='/home' className="nav-d-c">首页</Link>    
                     </div>
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"04")}>薪酬福利</Link>                
                     <div id="04" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d">首页</Link>    
+                        <Link to='/home' className="nav-d-c">首页</Link>    
                     </div>
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"05")}>招聘管理</Link>                
                     <div id="05" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d">首页</Link>    
+                        <Link to='/home' className="nav-d-c">首页</Link>    
                     </div>
                 </div>            
               
