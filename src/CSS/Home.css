@@ -1,0 +1,18 @@
+#home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.home-g{
+    width: auto;
+    background-color: #fff;
+    margin: 8px 10px 0 8px;
+    border-radius: 3px;
+}
+.home-header{
+    height: 150px;
+}
+.home-body{
+    height: 475px;
+}
