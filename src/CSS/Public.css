@@ -1,10 +1,10 @@
-/* 箭头图标 */
-/* .arrow-down{
-    display: inline-block;
-    background-image: url('../IMG/arrow-down_25x25.png');
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    left: 150px;
-    bottom: -10px;
-} */
+*{
+    color: rgb(104, 104, 104);
+}
+.line{
+    content: "";
+    display: block;
+    width: auto;
+    height: 2px;
+    background: rgba(219, 219, 219, 0.384);
+}

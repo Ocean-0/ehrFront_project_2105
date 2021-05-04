@@ -15,4 +15,62 @@
 }
 .home-body{
     height: 475px;
+    padding-top: 20px;
+    padding-left: 25px;
+}
+
+.home-body>span:nth-child(1)::before{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 15px;
+    margin: 10px 10px 0 0;
+    background-color: rgb(128, 169, 245);
+}
+.home-body>span:nth-child(2){
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    bottom: -7px;
+}
+
+.home-content{
+    overflow: hidden;
+}
+.home-c-g{
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+}
+.home-l{
+    float: left;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 3px rgba(219, 219, 219) dotted;
+}
+.home-l>div{
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    margin: 10px 12px;
+    border: 1px red solid;
+}
+.home-l>div *{
+    text-decoration: none;
+}
+
+.home-r{
+    float: right;    
+    justify-content: center;
+    /* 不生效？？ */
+    /* align-items: center; */
+}
+.home-r>div{
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    margin: 10px 12px;
+    border: 1px red solid;
 }
