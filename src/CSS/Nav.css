@@ -12,7 +12,6 @@
     height: 60px;
     background: url('../IMG//avengers_gaitubao_169x60.png') no-repeat;
     background-position-x: 15px;
-    margin-bottom: 10px;
 }
 .nav-g:active{
     color: white;
@@ -25,6 +24,7 @@
     line-height: 60px;
     color: rgb(104, 104, 104);
     text-decoration: none;
+    border-top: 1px rgba(219, 219, 219) solid;
 }
 .nav-g::before{
     content: "";
