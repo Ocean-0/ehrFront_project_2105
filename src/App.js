@@ -16,8 +16,10 @@ class App extends Component{
           <Navbar/>      
           <Header/>
           <Switch>
-            <Route exact path='/' component={Home} />
+            {/* <Route exact path='/' component={Home} /> */}
             <Route path='/home' component={Home} />
+            {/* <Route path='/user' component={Home} />
+            <Route path='/user/home' component={Home} /> */}
           </Switch>
 
         </BrowserRouter>  

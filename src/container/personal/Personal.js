@@ -11,7 +11,7 @@ class Personal extends Component {
             error: ""
         }
     }
-    check = (account,password) => {
+    check = (account, password) => {
         if (password.value.length < 6) {
             console.log(account.value, password.value)
             this.setState({ error: "账号密码格式错误" });
@@ -19,32 +19,47 @@ class Personal extends Component {
         }
         return true;
     }
-    logining() {
-        console.log('logining: ')
+    logining = (account, password) => {
+        console.log('logining: ', account.value, password.value)
         reqLogin(Qs.stringify({
-            account: this.props.workPlace,
-            passWord: this.props.station
+            account: account.value,
+            passWord: password.value
         }), 'POST')
             .then((res) => {
-                console.log('login success ',);
-                // this.props.history.push({ pathname: '/jobList', station: '技术' });
+                console.log('login success ', res.data, res.data != 'connection');
+                if (res.data != 'connection') {
+                    return false;
+                }
+                this.loginSuccess('pass');
                 return true;
+                // return res.data;
             })
             .catch((e) => {
-                this.setState({ error: "账号或密码错误" });
+                // this.setState({ error: "请刷新页面重试" });
                 return false;
             });
     }
-    loginCheck(param) {
+    loginSuccess = (param) => {
+        console.log("loginSuccess", param)
         this.props.token(param);
+    }
+    loginFail = (param) => {
+        console.log("loginFail", param)
+        this.setState({ error: "账号或密码错误" });
     }
     login = () => {
         var account = document.getElementById('account');
         var password = document.getElementById('password');
+        // check01
         if (!this.check(account,password)) {
             return;
         }
-        this.loginCheck('pass');
+        // check02
+        var temp = this.logining(account,password);
+        console.log(temp);
+        if(!temp){
+            this.loginFail('error');
+        }
     }
     render() {
         return (
