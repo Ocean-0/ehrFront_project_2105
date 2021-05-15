@@ -30,7 +30,7 @@ class Personal extends Component {
                 if (res.data != 'connection') {
                     return false;
                 }
-                this.loginSuccess('pass');
+                this.loginSuccess('pass',account.value);
                 return true;
                 // return res.data;
             })
@@ -39,9 +39,10 @@ class Personal extends Component {
                 return false;
             });
     }
-    loginSuccess = (param) => {
+    loginSuccess = (param,accountId) => {
         console.log("loginSuccess", param)
-        this.props.token(param);
+        this.props.token(param,accountId);
+        // this.props.setAccount(accountId);
     }
     loginFail = (param) => {
         console.log("loginFail", param)
@@ -57,9 +58,9 @@ class Personal extends Component {
         // check02
         var temp = this.logining(account,password);
         console.log(temp);
-        if(!temp){
-            this.loginFail('error');
-        }
+        // if(!temp){
+        //     this.loginFail('error');
+        // }
     }
     render() {
         return (
