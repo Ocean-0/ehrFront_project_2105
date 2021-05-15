@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import Singleton  from '../public/cache/Singleton'
 import '../CSS/Header.css'
 
 class Header extends Component{
 
     render(){
+        console.log('header props:', Singleton.getStoreInstance())
         return (
             <div id="header-container">
                 <div id="header-l">
@@ -12,7 +14,7 @@ class Header extends Component{
                 </div>
                 <div id="header-r">
                     <input placeholder="手机/工号/姓名"></input>
-                    <span>姓名  编号</span>
+                    <span>欢迎!&nbsp;&nbsp;{Singleton.getStoreInstance().loginAcc}</span>
                 </div>
             </div>
             // <div id="header-container">

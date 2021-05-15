@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import Singleton  from '../public/cache/Singleton'
 import '../CSS/Home.css'
 import '../CSS/Public.css'
 
 class Home extends Component{
-
+    componentDidMount(){
+        
+    }
 
     render(){
+        console.log('home props:', Singleton.getStoreInstance())
         return (
             <div id="home-container">
                 <div className="home-header home-g"></div>

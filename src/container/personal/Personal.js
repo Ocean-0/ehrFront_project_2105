@@ -28,6 +28,7 @@ class Personal extends Component {
             .then((res) => {
                 console.log('login success ', res.data, res.data != 'connection');
                 if (res.data != 'connection') {
+                    this.loginFail('error');
                     return false;
                 }
                 this.loginSuccess('pass',account.value);
@@ -56,8 +57,10 @@ class Personal extends Component {
             return;
         }
         // check02
-        var temp = this.logining(account,password);
-        console.log(temp);
+        this.logining(account,password);
+        // var temp = 
+        // console.log(temp);
+        // if(temp == undefined)return;
         // if(!temp){
         //     this.loginFail('error');
         // }
