@@ -5,10 +5,14 @@ import App from './App';
 import Main from './container/Main'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'mobx-react'
+import dataContainer from './public/cache/DataContainer'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider dataContainer={dataContainer}>
       <Main/>
+    </Provider>
     {/* <BrowserRouter> 
       <Redirect exact from='/user' to='/login' />
       <Switch>

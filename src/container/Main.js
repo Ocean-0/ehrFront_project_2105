@@ -15,18 +15,18 @@ class Main extends Component{
         this.loginCheck = this.loginCheck.bind(this);
     }
     loginCheck(tokenId,accountId){
-        console.log("tokenid:",tokenId)
         this.setState({token:tokenId,loginAccount:accountId});
     }
     //修改失败
     setAccount(accountId){
-        console.log("accountId:",accountId)
         this.setState({loginAccount:accountId});
     }
     render(){
         if(this.state.token === "pass"){
             return (
-                <App loginAccount={this.state.loginAccount} store={Singleton.getStoreInstance()}/>
+                //test 0515 16 37
+                // <App loginAccount={this.state.loginAccount} store={Singleton.getStoreInstance()}/>
+                <App loginAccount={this.state.loginAccount} />
                 // <Redirect exact to='/user' />
             );
         }

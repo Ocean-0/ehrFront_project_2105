@@ -4,13 +4,17 @@ import Singleton  from '../public/cache/Singleton'
 import '../CSS/Home.css'
 import '../CSS/Public.css'
 
+import {observer,inject,Provider} from 'mobx-react'
+
+@observer
+@inject('dataContainer')
 class Home extends Component{
     componentDidMount(){
-        
+
     }
 
     render(){
-        console.log('home props:', Singleton.getStoreInstance())
+        console.log('home props:',this.props)
         return (
             <div id="home-container">
                 <div className="home-header home-g"></div>

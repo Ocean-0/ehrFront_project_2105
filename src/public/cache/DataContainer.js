@@ -1,9 +1,11 @@
 import {action, observable} from 'mobx'
 
-export default class DataContainer {
+class DataContainer {
     @observable loginAcc = '';
     @action.bound setLoginAccount(acc){
         this.loginAcc = acc;
     }
-}
 
+}
+const dataContainer = new DataContainer();
+export default dataContainer;

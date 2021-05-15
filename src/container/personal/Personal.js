@@ -13,14 +13,12 @@ class Personal extends Component {
     }
     check = (account, password) => {
         if (password.value.length < 6) {
-            console.log(account.value, password.value)
             this.setState({ error: "账号密码格式错误" });
             return false;
         }
         return true;
     }
     logining = (account, password) => {
-        console.log('logining: ', account.value, password.value)
         reqLogin(Qs.stringify({
             account: account.value,
             passWord: password.value
@@ -33,7 +31,6 @@ class Personal extends Component {
                 }
                 this.loginSuccess('pass',account.value);
                 return true;
-                // return res.data;
             })
             .catch((e) => {
                 // this.setState({ error: "请刷新页面重试" });
@@ -41,12 +38,9 @@ class Personal extends Component {
             });
     }
     loginSuccess = (param,accountId) => {
-        console.log("loginSuccess", param)
         this.props.token(param,accountId);
-        // this.props.setAccount(accountId);
     }
     loginFail = (param) => {
-        console.log("loginFail", param)
         this.setState({ error: "账号或密码错误" });
     }
     login = () => {
@@ -58,12 +52,6 @@ class Personal extends Component {
         }
         // check02
         this.logining(account,password);
-        // var temp = 
-        // console.log(temp);
-        // if(temp == undefined)return;
-        // if(!temp){
-        //     this.loginFail('error');
-        // }
     }
     render() {
         return (

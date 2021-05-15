@@ -1,16 +1,16 @@
-import DataContainer  from './DataContainer'
+// import DataContainer  from './DataContainer'
 
-export default class Singleton {
+// export default class Singleton {
 
-    constructor(){}
+//     constructor(){}
 
-    static instance = null;
+//     static instance = null;
 
-    static getStoreInstance(){
-        if(this.instance == null){
-            this.instance = new DataContainer();
-            return this.instance;
-        }
-        return this.instance;
-    }
-}
+//     static getStoreInstance(){
+//         if(this.instance == null){
+//             this.instance = new DataContainer();
+//             return this.instance;
+//         }
+//         return this.instance;
+//     }
+// }
