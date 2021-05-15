@@ -6,7 +6,15 @@ import '../CSS/Header.css'
 @observer
 @inject('dataContainer')
 class Header extends Component{
-
+    constructor(){
+        super()
+        this.state = {
+            showAcc:''
+        }
+    }
+    componentDidMount(){
+        this.setState({showAcc:this.props.dataContainer.loginAcc})
+    }
     render(){
         console.log('header props:', this.props)
         return (
@@ -17,7 +25,7 @@ class Header extends Component{
                 </div>
                 <div id="header-r">
                     <input placeholder="手机/工号/姓名"></input>
-                    <span>欢迎!&nbsp;&nbsp;{this.props.dataContainer.loginAcc}</span>
+                    <span>欢迎!&nbsp;&nbsp;{this.state.showAcc}</span>
                 </div>
             </div>
             // <div id="header-container">
