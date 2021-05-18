@@ -22,14 +22,15 @@ class App extends Component{
       <div className="App">
         <BrowserRouter> 
           <Navbar/>      
-          <Header/>
+          <Header />
           <Switch>
             <Route exact path='/'>
-              {/* <Provider store={new DataContainer()}> */}
-                <Home/>
-              {/* </Provider> */}
+                <Home />
             </Route>
-            <Route path='/home' component={Home}/>
+            <Route path='/home'>
+                <Home />
+            </Route>
+            {/* <Route path='/home' component={Home}/> */}
           </Switch>
 
         </BrowserRouter>  

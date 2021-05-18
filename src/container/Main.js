@@ -22,6 +22,7 @@ class Main extends Component{
         this.setState({loginAccount:accountId});
     }
     render(){
+        console.log('main state:',this.state)
         if(this.state.token === "pass"){
             return (
                 //test 0515 16 37

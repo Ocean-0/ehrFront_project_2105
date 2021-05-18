@@ -33,7 +33,7 @@ class Personal extends Component {
                 return true;
             })
             .catch((e) => {
-                // this.setState({ error: "请刷新页面重试" });
+                this.setState({ error: "请刷新页面重试" });
                 return false;
             });
     }

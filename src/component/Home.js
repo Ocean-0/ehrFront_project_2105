@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import Singleton  from '../public/cache/Singleton'
+import Qs from 'qs'
+import {reqPersonal} from '../public/api/ReqApi'
 import '../CSS/Home.css'
 import '../CSS/Public.css'
 
@@ -10,6 +12,18 @@ import {observer,inject,Provider} from 'mobx-react'
 @inject('dataContainer')
 class Home extends Component{
     componentDidMount(){
+        console.log('home didmount: ',this.props)
+        reqPersonal(Qs.stringify({
+            account: this.props.dataContainer.loginAcc,
+            token: 'home login'+Math.random()
+        }), 'POST')
+        .then((res) => {
+            console.log('home getData', res, res.data);
+            
+        })
+        .catch((e) => {
+            console.log('网络错误,请重试', e)
+        });
 
     }
 
@@ -17,7 +31,9 @@ class Home extends Component{
         console.log('home props:',this.props)
         return (
             <div id="home-container">
-                <div className="home-header home-g"></div>
+                <div className="home-header home-g">
+                    <div>{}</div>
+                </div>
                 <div className="home-body home-g">
                     <span>常用功能</span>
                     <span>设置</span>

@@ -12,11 +12,24 @@ class Header extends Component{
             showAcc:''
         }
     }
+    // shouldComponentUpdate(nextProps,nextState){
+    //     console.log('header update')
+    //     return true;
+    // }
     componentDidMount(){
         this.setState({showAcc:this.props.dataContainer.loginAcc})
     }
+    // componentDidUpdate(prevProps) {
+    //     console.log('header update',this.props.dataContainer.loginAcc)
+    //     if (this.props.dataContainer.loginAcc!== prevProps.dataContainer.loginAcc) { // 比较前后props
+    //         this.setState({showAcc:this.props.dataContainer.loginAcc})
+    //         // this.setState(function(){  // 如果props发生变化，调用setState()
+    //         //         return {showAcc:this.props.dataContainer.loginAcc}
+    //         // })
+    //     }
+    // }
     render(){
-        console.log('header props:', this.props)
+        console.log('header props:', this.props,this.state)
         return (
             <div id="header-container">
                 <div id="header-l">
@@ -25,7 +38,7 @@ class Header extends Component{
                 </div>
                 <div id="header-r">
                     <input placeholder="手机/工号/姓名"></input>
-                    <span>欢迎!&nbsp;&nbsp;{this.state.showAcc}</span>
+                    <span>欢迎!&nbsp;&nbsp;{this.props.dataContainer.loginAcc}</span>
                 </div>
             </div>
             // <div id="header-container">
