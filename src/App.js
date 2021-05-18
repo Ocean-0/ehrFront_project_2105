@@ -6,6 +6,7 @@ import Header from './component/Header'
 import Home from './component/Home'
 import Singleton  from './public/cache/Singleton'
 import DataContainer from './public/cache/DataContainer'
+import BasicBrowse from './container/basic/BasicBrowse'
 
 import './App.css';
 
@@ -29,6 +30,9 @@ class App extends Component{
             </Route>
             <Route path='/home'>
                 <Home />
+            </Route>
+            <Route path='/basicBrowse'>
+                <BasicBrowse />
             </Route>
             {/* <Route path='/home' component={Home}/> */}
           </Switch>

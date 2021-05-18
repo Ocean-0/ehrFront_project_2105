@@ -40,8 +40,8 @@ class Navbar extends Component{
                     </div>
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"03")}>个人信息</Link>                
                     <div id="03" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d-c">浏览</Link>    
-                        <Link to='/home' className="nav-d-c">提交</Link>    
+                        <Link to='/basicBrowse' className="nav-d-c">基本信息</Link>    
+                        <Link to='/home' className="nav-d-c">信息更新</Link>    
                     </div>
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"04")}>薪酬福利</Link>                
                     <div id="04" className="nav-d" style={{ display: 'none' }} data-show='true'>

@@ -1,0 +1,9 @@
+#browse-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#browse-container span{
+    line-height: 60px;
+    color: rgb(104, 104, 104);
+}
