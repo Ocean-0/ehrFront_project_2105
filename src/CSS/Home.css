@@ -13,6 +13,14 @@
 .home-header{
     height: 150px;
 }
+.home-header>div{
+    margin-top: 30px;
+    margin-left: 120px;
+}
+.home-header>div>div:nth-child(1){
+    color: rgb(128, 169, 245);
+    font-size: 30px;
+}
 .home-body{
     height: 475px;
     padding-top: 20px;

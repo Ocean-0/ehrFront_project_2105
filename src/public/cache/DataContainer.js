@@ -5,6 +5,7 @@ class DataContainer {
     @observable createDate = {};
     @observable maxAge = 360;
     @observable data = {};
+    @observable basicData = {};
 
     @action.bound setLoginAccount(acc){
         this.loginAcc = acc;
@@ -14,6 +15,12 @@ class DataContainer {
     }
     @action.bound setMaxAge(maxAge){
         this.maxAge = maxAge;
+    }
+    @action.bound setData(data){
+        this.data = data;
+    }
+    @action.bound setBasicData(data){
+        this.basicData = data;
     }
     @action.bound cleanAll(){
         this.loginAcc = '';
