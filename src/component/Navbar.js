@@ -34,11 +34,11 @@ class Navbar extends Component{
                         {/* <Link to='/home' className="nav-d-c">首页</Link>    
                         <Link to='/home' className="nav-d-c">首页</Link>     */}
                     </div>
-                    <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"02")}>信息查询</Link>                
+                    <Link to='/basicQuery' className="nav-g" onClick={this.showDetail.bind(this,"02")}>信息查询</Link>                
                     <div id="02" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d-c">基础信息查询</Link>    
+                        <Link to='/basicQuery' className="nav-d-c">基础信息查询</Link>    
                     </div>
-                    <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"03")}>个人信息</Link>                
+                    <Link to='/basicBrowse' className="nav-g" onClick={this.showDetail.bind(this,"03")}>个人信息</Link>                
                     <div id="03" className="nav-d" style={{ display: 'none' }} data-show='true'>
                         <Link to='/basicBrowse' className="nav-d-c">基本信息</Link>    
                         <Link to='/basicUpdate' className="nav-d-c">信息更新</Link>    

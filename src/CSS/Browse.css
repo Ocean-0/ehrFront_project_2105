@@ -41,10 +41,27 @@
     /* border: 1px red solid; */
 }
 
+/* browse update */
 .browse-up-box>div{
     width: 300px;
     /* border: 1px red solid; */
 }
 .browse-up-c{
     width: 100%;
+}
+
+
+/* browse query */
+.browse-qu-header{
+    height: 150px;
+}
+#browse-input{
+    width: 170px;
+    height: 25px;
+    padding: 0 25px 0 10px;
+    margin: 30px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: rgba(151, 151, 151, 0.384);
 }

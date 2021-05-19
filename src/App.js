@@ -8,6 +8,7 @@ import Singleton  from './public/cache/Singleton'
 import DataContainer from './public/cache/DataContainer'
 import BasicBrowse from './container/basic/BasicBrowse'
 import BasicUpdate from './container/basic/BasicUpdate'
+import BasicQuery from './container/basic/BasicQuery'
 
 import './App.css';
 
@@ -37,6 +38,9 @@ class App extends Component{
             </Route>
             <Route path='/basicUpdate'>
                 <BasicUpdate />
+            </Route>
+            <Route path='/basicQuery'>
+                <BasicQuery />
             </Route>
           </Switch>
 
