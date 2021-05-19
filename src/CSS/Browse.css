@@ -7,3 +7,36 @@
     line-height: 60px;
     color: rgb(104, 104, 104);
 }
+.browse-g{
+    width: auto;
+    background-color: #fff;
+    margin: 8px 10px 0 8px;
+    border-radius: 3px;
+}
+.browse-g>span:nth-child(1)::before{
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 15px;
+    margin: 10px 10px 0 5px;
+    background-color: rgb(128, 169, 245);
+}
+.browse-g>span:nth-child(2){
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    /* bottom: -2px; */
+}
+.browse-content{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    /* border: 1px red solid; */
+}
+.browse-content>div{
+    margin: 5px 20px;
+    flex-basis: 300px;
+    /* border: 1px red solid; */
+}
