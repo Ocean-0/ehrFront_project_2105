@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {observer,inject,Provider} from 'mobx-react'
 import {itemName} from '../../static/ItemName'
 import {Item} from '../../static/Item'
+import Qs from 'qs'
+import {reqPersonal,reqBasic} from '../../public/api/ReqApi'
 import '../../CSS/Browse.css'
 
 
@@ -15,17 +17,50 @@ class BasicQuery extends Component{
             bData:{}
         }
     }
+    getData = (e) =>{
+        console.log('query get data：')        
+        if(e.charCode == 13){
+            var input = document.getElementById('browse-input');
+            console.log(input.value)
+            reqPersonal(Qs.stringify({
+                account: input.value,
+                token: 'home login'+Math.random()
+            }), 'POST')
+            .then((res) => {
+                this.setState({data:res.data})
+            })
+            .catch((e) => {
+                this.setState({data:null,bData:null,});
+                console.log('网络错误,请重试', e)
+            });
+            
+            reqBasic(Qs.stringify({
+                account: input.value,
+                token: 'home login'+Math.random()
+            }), 'POST')
+            .then((res) => {
+                this.setState({bData:res.data})
+            })
+            .catch((e) => {
+                this.setState({data:null,bData:null,});
+                console.log('网络错误,请重试', e)
+            });
+    
+        }
+    }
     componentDidMount(){
         this.setState({
-            data:this.props.dataContainer.data,
-            bData:this.props.dataContainer.basicData,
+            data:null,
+            bData:null,
+            // data:this.props.dataContainer.data,
+            // bData:this.props.dataContainer.basicData,
         });
     }
     render(){
         const {basic,jobinfo,workin,workout,eduinfo,member,skill} = itemName;
         const {data,bData} = this.state;
         console.log(data,bData,this.state)
-        var show = (data !== null && bData !== null)?(
+        var show = (data !== null && data !== {} && data !== '' && bData !== {} && bData !== null && bData !== '' )?(
             <div>
                 <div className="browse-g">
                     <span>基础信息</span>
@@ -131,16 +166,16 @@ class BasicQuery extends Component{
                 </div>
             </div>
         ):(
-            <div>未查询到该用户</div>
+            <div className='error'>未查询到该用户&nbsp;&nbsp;(*&gt;﹏&lt;*)</div>
         );
         
         return (
             <div id="browse-container">
+                <div className="up" onClick={()=>window.scrollTo(0,0)}></div>
                 <div className="browse-qu-header browse-qu-g home-g">
-                <div >
-                    <input id="browse-input" placeholder="手机/工号/姓名"></input>                    
-                </div>
-
+                    <div >
+                        <input id="browse-input" placeholder="手机/工号/姓名" onKeyPress={this.getData}></input>                    
+                    </div>
                 </div>
                 <div className="browse-qu-content browse-qu-g home-g">                    
                     {show}

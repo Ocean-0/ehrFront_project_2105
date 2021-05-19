@@ -65,3 +65,44 @@
     border: none;
     background: rgba(151, 151, 151, 0.384);
 }
+.submit{
+    /* position: absolute; */
+    /* right: 100px; */
+    position: fixed;
+    bottom: 190px;
+    right: 90px;
+    width: 70px;
+    height: 35px;
+    background-color: rgb(128, 169, 245,0.7);
+    z-index: 999;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    box-shadow: rgb(128, 169, 245) 2px 2px 5px;
+}
+.submit:hover{
+    color: #fff;
+    background-color: rgb(62, 125, 241,0.9);
+}
+.up{    
+    position: fixed;
+    bottom: 120px;
+    right: 110px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px rgb(179, 174, 174) solid;
+    background: url('../IMG//arrow-down_25x25.png') no-repeat;
+    transform: rotate(180deg);
+}
+.up:hover{
+    border: 1px rgb(102, 102, 102) solid;
+}  
+
+.error{
+    font-size: 25px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: rgb(223, 53, 53);
+}

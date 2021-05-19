@@ -27,6 +27,8 @@ class BasicUpdate extends Component{
         const {data,bData} = this.state;
         return (
             <div id="browse-container">
+                <div className="submit">提交</div>
+                <div className="up" onClick={()=>window.scrollTo(0,0)}></div>
                 <div className="browse-g">
                     <span>基础信息</span>
                     <span>设置</span>
