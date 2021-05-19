@@ -25,7 +25,7 @@ class App extends Component{
       <div className="App">
         <BrowserRouter> 
           <Navbar/>      
-          <Header />
+          <Header history={this.props.history}/>
           <Switch>
             <Route exact path='/'>
                 <Home />

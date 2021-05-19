@@ -74,7 +74,7 @@ class Home extends Component{
                     <div className="home-content">
                         <div className="home-l home-c-g">
                             <div>
-                                <Link to='/home' className="">基本信息</Link> 
+                                <Link to='/basicBrowse' className="">基本信息</Link> 
                             </div>
                             <div>
                                 <Link to='/home' className="">假期信息</Link> 
@@ -83,7 +83,7 @@ class Home extends Component{
                                 <Link to='/home' className="">餐费查询</Link> 
                             </div>
                             <div>
-                                <Link to='/home' className="">员工查询</Link> 
+                                <Link to='/basicQuery' className="">员工查询</Link> 
                             </div>
                             <div>
                                 <Link to='/home' className="">组织架构</Link> 
@@ -94,7 +94,10 @@ class Home extends Component{
                         </div>
                         <div className="home-r home-c-g">                            
                             <div>
-                                <Link to='/home' className="">签到</Link> 
+                                <Link to='/home' className="">上班</Link> 
+                            </div>
+                            <div>
+                                <Link to='/home' className="">下班</Link> 
                             </div>
                         </div>                    
                     </div>

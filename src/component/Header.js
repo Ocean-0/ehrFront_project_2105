@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom'
 import Singleton  from '../public/cache/Singleton'
 import {observer,inject,Provider} from 'mobx-react'
 import '../CSS/Header.css'
@@ -10,6 +11,14 @@ class Header extends Component{
         super()
         this.state = {
             showAcc:''
+        }
+    }
+    goBasicQuery = (e) =>{
+        if(e.charCode == 13){
+            console.log('goBasicQuery');
+            var input = document.getElementById('header-input')
+            console.log(this.props)
+            this.props.history.push({pathname:'/basicQuery',query:input.value});
         }
     }
     // shouldComponentUpdate(nextProps,nextState){
@@ -37,7 +46,7 @@ class Header extends Component{
                     <span>员工自主服务平台</span>
                 </div>
                 <div id="header-r">
-                    <input placeholder="手机/工号/姓名"></input>
+                    <input id="header-input" placeholder="手机/工号/姓名" onKeyPress={this.goBasicQuery}></input>
                     <span>欢迎!&nbsp;&nbsp;{this.props.dataContainer.loginAcc}</span>
                 </div>
             </div>
@@ -52,4 +61,4 @@ class Header extends Component{
 
     
 }
-export default Header;
+export default withRouter(Header);

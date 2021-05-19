@@ -47,8 +47,16 @@ class Navbar extends Component{
                     <div id="04" className="nav-d" style={{ display: 'none' }} data-show='true'>
                         <Link to='/home' className="nav-d-c">首页</Link>    
                     </div>
-                    <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"05")}>招聘管理</Link>                
+                    <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"05")}>统计分析</Link>                
                     <div id="05" className="nav-d" style={{ display: 'none' }} data-show='true'>
+                        <Link to='/home' className="nav-d-c">首页</Link>    
+                    </div>
+                    <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"06")}>公告管理</Link>                
+                    <div id="06" className="nav-d" style={{ display: 'none' }} data-show='true'>
+                        <Link to='/home' className="nav-d-c">首页</Link>    
+                    </div>
+                    <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"07")}>招聘管理</Link>                
+                    <div id="07" className="nav-d" style={{ display: 'none' }} data-show='true'>
                         <Link to='/home' className="nav-d-c">首页</Link>    
                     </div>
                 </div>            
