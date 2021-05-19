@@ -40,3 +40,11 @@
     flex-basis: 300px;
     /* border: 1px red solid; */
 }
+
+.browse-up-box>div{
+    width: 300px;
+    /* border: 1px red solid; */
+}
+.browse-up-c{
+    width: 100%;
+}
