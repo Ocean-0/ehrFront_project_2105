@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as echarts from 'echarts'
-import {reqAnSex,reqAnAbility} from '../../public/api/ReqApi'
+import {reqAnSex,reqAnAbility,reqAnEdu} from '../../public/api/ReqApi'
 import Qs from 'qs'
 import '../../CSS/Analysis.css'
 
@@ -65,6 +65,21 @@ class AnAility extends Component{
             this.setState({error:'网络错误,请重试'});
             console.log('网络错误,请重试', e)
         });
+        reqAnEdu(Qs.stringify({
+            account: 666,
+            token: 'home login'+Math.random()
+        }), 'POST')
+        .then((res) => {
+            this.setState({
+                data:res.data,
+                error:''
+            })
+            report.series[0].data = res.data;
+        })
+        .catch((e) => {
+            this.setState({error:'网络错误,请重试'});
+            console.log('网络错误,请重试', e)
+        });
 
 
         var chartDom = document.getElementById('pie');
@@ -92,10 +107,10 @@ class AnAility extends Component{
                     <div id="report">#</div>
                 </div>
                 <div className="ana-g ana-c">
+                    <div id="pentagon">#</div>
                     <div className="ana-c-c">
                         <input id="ana-input" placeholder="工号" onKeyPress={this.getData}></input>                    
                     </div>
-                    <div id="pentagon">#</div>
                 </div>
                 <span className="error">{this.state.error}</span>
             </div>
@@ -155,7 +170,14 @@ const report = {
         name: '学历',
         type: 'bar',
         data: [5, 5, 5, 5, 5, 5]
-    }]
+    }
+    // ,
+    // {
+    //     name: '学历',
+    //     type: 'bar',
+    //     data: [5, 5, 5, 5, 5, 5]
+    // }
+    ]
 };
 
 const pentagon = {
