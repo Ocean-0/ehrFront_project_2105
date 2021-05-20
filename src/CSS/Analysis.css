@@ -32,3 +32,19 @@
 .ana-c{
     height: 550px;
 }
+
+#ana-input{
+    width: 100px;
+    height: 45px;
+    padding: 0 25px 0 10px;
+    margin: 30px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: rgba(236, 229, 229, 0.384);
+}
+
+
+/* .ana-c-c{
+    flex-basis: 200px;
+} */

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import * as echarts from 'echarts'
-import {reqAnSex} from '../../public/api/ReqApi'
+import {reqAnSex,reqAnAbility} from '../../public/api/ReqApi'
 import Qs from 'qs'
 import '../../CSS/Analysis.css'
 
@@ -9,8 +9,41 @@ class AnAility extends Component{
         super();
         this.state = {
             data:{},
+            data3:{},
             error:''
         }
+    }
+    pentagon_instance = null;
+
+    getData = (e) =>{      
+        if(e.charCode == 13){
+            var input = document.getElementById('ana-input');
+            reqAnAbility(Qs.stringify({
+                account: input.value,
+                token: 'home login'+Math.random()
+            }), 'POST')
+            .then((res) => {
+                console.log(res.data)
+                this.newArr(res.data)
+                // this.setState({data:res.data})
+            })
+            .catch((e) => {
+                this.setState({error:'网络错误,请重试'});
+                console.log('网络错误,请重试', e)
+            });    
+        }
+    }
+    newArr = (arr) =>{
+        var [a, ...rest] = arr;
+        pentagon.title.text = a + ' > 能力审核';
+        // pentagon.title.text = arr[0] + '能力审核';
+        pentagon.series[0].data.value = rest;
+        if(this.pentagon_instance !== null  && this.pentagon_instance != "" && this.pentagon_instance != undefined){
+            this.pentagon_instance.dispose();
+        }
+        var pentagon01Dom = document.getElementById('pentagon');
+        var pentagon01 = echarts.init(pentagon01Dom);
+        pentagon01.setOption(pentagon)
     }
     componentDidMount(){
         reqAnSex(Qs.stringify({
@@ -38,6 +71,7 @@ class AnAility extends Component{
 
         var pentagon01Dom = document.getElementById('pentagon');
         var pentagon01 = echarts.init(pentagon01Dom);
+        this.pentagon_instance = pentagon01;
         pentagon01.setOption(pentagon)
     }
     render(){
@@ -52,6 +86,9 @@ class AnAility extends Component{
                     <div id="report">#</div>
                 </div>
                 <div className="ana-g ana-c">
+                    <div className="ana-c-c">
+                        <input id="ana-input" placeholder="工号" onKeyPress={this.getData}></input>                    
+                    </div>
                     <div id="pentagon">#</div>
                 </div>
                 {this.state.error}
