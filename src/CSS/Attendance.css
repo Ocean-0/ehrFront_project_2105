@@ -9,15 +9,24 @@
     margin: 8px 14px 0 8px;
     border-radius: 3px;
     /* padding-top: 50px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 .att-header{
     height: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 #timeMap{
     flex-basis: 850px;
     width: 850px;
     height: 230px;
 }
+
+
+.att-c{
+    height: 500px;
+}
+
+.ant-tabs {
+    overflow: visible;
+  }

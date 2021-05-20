@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import * as echarts from 'echarts'
+import { DatePicker, Space } from 'antd';
 import {reqAttCount} from '../../public/api/ReqApi'
 import {observer,inject,Provider} from 'mobx-react'
 import Qs from 'qs'
@@ -24,11 +25,11 @@ class AttBrowse extends Component{
         }), 'POST')
         .then((res) => {
             console.log('att did mount：',res.data)
+            option.series.data = res.data;
             this.setState({
                 data:res.data,
                 error:''
             })
-            option.series.data = res.data;
         })
         .catch((e) => {
             this.setState({error:'网络错误,请重试'});
@@ -41,15 +42,21 @@ class AttBrowse extends Component{
         myChart.setOption(option)
 
     }
+    pickDate = (date, dateString) => {
+        console.log(date, dateString);
+    }
     render(){
         return (
             // id => class 组件空间width将占据页面
             <div id="att-container">
                 <div className="att-g att-header">
-                    <dvi id="timeMap">#</dvi>
+                    <div id="timeMap">#</div>
                 </div>
-                <div className="att-g">
-                    123
+                <div className="att-g att-c">
+                    <div className="ant-tabs">
+                        {/* <DatePicker renderExtraFooter={() => 'extra footer'} /> */}
+                        <DatePicker style={{ width: 120 }} getPopupContainer={this.props.root} popupStyle={{zIndex:9999,position:'relative',right:'500px'}}/>
+                    </div>
                 </div>
             </div>
         );
