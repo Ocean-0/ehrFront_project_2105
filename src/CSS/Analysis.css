@@ -1,15 +1,34 @@
 #ana-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* justify-content: center; */
 }
 .ana-g{
-    width: 400px;
+    width: 100%;
+    height: 350px;
     background-color: #fff;
     margin: 8px 10px 0 8px;
     border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 50px;
 }
 #pie{
+    flex-basis: 550px;
     width: 350px;
     height: 350px;
+}
+#report{
+    flex-basis: 550px;
+    width: 350px;
+    height: 350px;
+}
+#pentagon{
+    flex-basis: 800px;
+    width: 800px;
+    height: 600px;
+}
+.ana-c{
+    height: 550px;
 }
