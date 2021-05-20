@@ -9,6 +9,7 @@ import DataContainer from './public/cache/DataContainer'
 import BasicBrowse from './container/basic/BasicBrowse'
 import BasicUpdate from './container/basic/BasicUpdate'
 import BasicQuery from './container/basic/BasicQuery'
+import AnAbility from './container/analysis/AnAbility'
 
 import './App.css';
 
@@ -41,6 +42,9 @@ class App extends Component{
             </Route>
             <Route path='/basicQuery'>
                 <BasicQuery />
+            </Route>
+            <Route path='/anAbility'>
+                <AnAbility />
             </Route>
           </Switch>
 
