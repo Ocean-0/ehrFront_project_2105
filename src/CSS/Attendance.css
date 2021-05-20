@@ -5,14 +5,16 @@
 .att-g{
     min-width: 890px;
     width: auto;
-    height: 240px;
     background-color: #fff;
-    margin: 8px 10px 0 8px;
+    margin: 8px 14px 0 8px;
     border-radius: 3px;
     /* padding-top: 50px; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+.att-header{
+    height: 240px;
 }
 #timeMap{
     flex-basis: 850px;
