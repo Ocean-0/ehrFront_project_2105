@@ -48,6 +48,9 @@ class AttBrowse extends Component{
                 <div className="att-g att-header">
                     <dvi id="timeMap">#</dvi>
                 </div>
+                <div className="att-g">
+                    123
+                </div>
             </div>
         );
     }
