@@ -23,27 +23,30 @@ class AnAility extends Component{
                 token: 'home login'+Math.random()
             }), 'POST')
             .then((res) => {
-                console.log(res.data)
                 this.newArr(res.data)
-                // this.setState({data:res.data})
+                this.setState({
+                    error:''
+                })
             })
             .catch((e) => {
-                this.setState({error:'网络错误,请重试'});
-                console.log('网络错误,请重试', e)
+                this.setState({error:'未查询到该用户,请重试'});
             });    
         }
     }
     newArr = (arr) =>{
         var [a, ...rest] = arr;
         pentagon.title.text = a + ' > 能力审核';
-        // pentagon.title.text = arr[0] + '能力审核';
-        pentagon.series[0].data.value = rest;
+        pentagon.series[0].data[0].value = rest;
+        // pentagon.series[0].data[0].value = [1, 2.3, 4.6, 8.9, 5.4];
+        console.log('new arr：',a,rest)
         if(this.pentagon_instance !== null  && this.pentagon_instance != "" && this.pentagon_instance != undefined){
             this.pentagon_instance.dispose();
         }
         var pentagon01Dom = document.getElementById('pentagon');
-        var pentagon01 = echarts.init(pentagon01Dom);
-        pentagon01.setOption(pentagon)
+        this.pentagon_instance = echarts.init(pentagon01Dom);
+        // var pentagon01 = echarts.init(pentagon01Dom);
+        this.pentagon_instance.setOption(pentagon)
+        // pentagon01.setOption(pentagon)
     }
     componentDidMount(){
         reqAnSex(Qs.stringify({
@@ -51,7 +54,10 @@ class AnAility extends Component{
             token: 'home login'+Math.random()
         }), 'POST')
         .then((res) => {
-            this.setState({data:res.data})
+            this.setState({
+                data:res.data,
+                error:''
+            })
             pie.series[0].data['0'].value = res.data.man;
             pie.series[0].data['1'].value = res.data.woman;
         })
@@ -91,7 +97,7 @@ class AnAility extends Component{
                     </div>
                     <div id="pentagon">#</div>
                 </div>
-                {this.state.error}
+                <span className="error">{this.state.error}</span>
             </div>
         )
     }
@@ -178,7 +184,7 @@ const pentagon = {
                 name: '员工'
             },
             {
-                value: [5, 5, 5, 5, 5, 5],
+                value: [4.5, 4.5, 4.5, 4.5, 4.5, 4.5],
                 name: '及格线（pass line）'
             }
         ]
