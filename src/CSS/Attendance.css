@@ -1,0 +1,21 @@
+#att-container{
+    display: flex;
+    flex-direction: column;
+}
+.att-g{
+    min-width: 890px;
+    width: auto;
+    height: 240px;
+    background-color: #fff;
+    margin: 8px 10px 0 8px;
+    border-radius: 3px;
+    /* padding-top: 50px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#timeMap{
+    flex-basis: 850px;
+    width: 850px;
+    height: 230px;
+}

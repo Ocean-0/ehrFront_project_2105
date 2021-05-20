@@ -43,9 +43,9 @@ class Navbar extends Component{
                         <Link to='/basicBrowse' className="nav-d-c">基本信息</Link>    
                         <Link to='/basicUpdate' className="nav-d-c">信息更新</Link>    
                     </div>
-                    <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"04")}>薪酬福利</Link>                
+                    <Link to='/attBrowse' className="nav-g" onClick={this.showDetail.bind(this,"04")}>薪酬福利</Link>                
                     <div id="04" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d-c">首页</Link>    
+                        <Link to='/attBrowse' className="nav-d-c">福利查询</Link>    
                     </div>
                     <Link to='/home' className="nav-g" onClick={this.showDetail.bind(this,"05")}>公司概况</Link>                
                     <div id="05" className="nav-d" style={{ display: 'none' }} data-show='true'>
