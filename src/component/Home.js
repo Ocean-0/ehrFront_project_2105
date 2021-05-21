@@ -20,9 +20,12 @@ class Home extends Component{
             bData:{}
         }
     }
-    componentDidUpdate(){
-        this.reqBack();
-    }
+    // shouldComponentUpdate(nextProps,nextState){
+    //     if(nextProps == this.props)return false;
+    // }
+    // componentDidUpdate(){
+    //     this.reqBack();
+    // }
     componentDidMount(){
         this.reqBack();
     }
@@ -32,7 +35,7 @@ class Home extends Component{
             token: 'home login'+Math.random()
         }), 'POST')
         .then((res) => {
-            console.log('home getData', res.data);
+            // console.log('home getData', res.data);
             this.props.dataContainer.setData(res.data);
             this.setState({data:res.data})
         })
@@ -45,7 +48,7 @@ class Home extends Component{
             token: 'home login'+Math.random()
         }), 'POST')
         .then((res) => {
-            console.log('home getData02', res.data);
+            // console.log('home getData02', res.data);
             this.props.dataContainer.setBasicData(res.data);
             this.setState({bData:res.data})
         })

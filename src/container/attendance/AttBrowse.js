@@ -15,6 +15,7 @@ class AttBrowse extends Component{
             data:{},
             bData:{},
             cDate:{},
+            cDate02:{},
             error:''
         }
     }
@@ -36,7 +37,8 @@ class AttBrowse extends Component{
             this.countDate(res.data);
             this.setState({
                 data:res.data,
-                cDate:this.countDate(res.data,150,30,20),
+                cDate:this.countDate(res.data,150,30,20,0),
+                cDate02:this.countDate(res.data,150,30,20,1),
                 error:''
             })
         })
@@ -48,12 +50,17 @@ class AttBrowse extends Component{
         var myChart = echarts.init(chartDom);
         myChart.setOption(option)
     }
-    countDate = (arr,salary,subsidy,meal) => {
+    countDate = (arr,salary,subsidy,meal,type) => {
         var index = 0;
         var count = 0;
         var sum_subsidy = 0;
         // 5月代表4月
-        var oldMounth = new Date().getMonth() - 1;
+        var oldMounth = 0;
+        if(type == 0){
+            oldMounth = new Date().getMonth() - 1;
+        }else if(type == 1){
+            oldMounth = new Date().getMonth();
+        }
         var result = {};
         console.log(oldMounth)
         for(index; index < arr.length; index++){
@@ -117,11 +124,11 @@ class AttBrowse extends Component{
                     <div className="line"></div>
                     <div className="att-c-header">
                         <span className="font-b">&gt;</span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span>{this.state.cDate02.workDate}</span>
+                        <span>{this.state.cDate02.freeDate}</span>
+                        <span>{this.state.cDate02.sum_subsidy}</span>
+                        <span>{this.state.cDate02.meal_supply}</span>
+                        <span>{this.state.cDate02.sum_subsidy}+{this.state.cDate02.meal_supply}+{this.state.cDate02.pay}={this.state.cDate02.sum_subsidy+this.state.cDate02.meal_supply+this.state.cDate02.pay}</span>
                     </div>
                 </div>
             </div>

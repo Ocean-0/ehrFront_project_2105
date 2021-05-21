@@ -25,7 +25,7 @@ class Personal extends Component {
         }), 'POST')
             .then((res) => {
                 console.log('login success ', res.data, res.data != 'connection');
-                if (res.data != 'connection') {
+                if (res.data.msg != 'connection') {
                     this.loginFail('error');
                     return false;
                 }
