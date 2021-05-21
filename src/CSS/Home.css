@@ -70,11 +70,39 @@
     width: 120px;
     height: 120px;
     margin: 10px 12px;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 .home-l>div *{
     text-decoration: none;
 }
+.home-l>div>div{
+    margin: 0 auto;
+}
+
+
+.img-g{
+    width: 79px;
+    height: 79px;
+}
+#img-1{
+    background: url('../IMG/man.png') center no-repeat;
+}
+#img-2{
+    background: url('../IMG/vacation.png') center no-repeat;
+}
+#img-3{
+    background: url('../IMG/eat.png') center no-repeat;
+}
+#img-4{
+    background: url('../IMG/request.png') center no-repeat;
+}
+#img-5{
+    background: url('../IMG/framework.png') center no-repeat;
+}
+#img-6{
+    background: url('../IMG/apply.png') center no-repeat;
+}
+
 
 .home-r{
     float: right;    
@@ -87,5 +115,17 @@
     width: 120px;
     height: 120px;
     margin: 10px 12px;
-    border: 1px red solid;
+    /* border: 1px red solid; */
+}
+.home-r>div *{
+    text-decoration: none;
+}
+.home-r>div>div{
+    margin: 0 auto;
+}
+#img-7{
+    background: url('../IMG/work.png') center no-repeat;
+}
+#img-8{
+    background: url('../IMG/off.png') center no-repeat;
 }

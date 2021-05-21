@@ -75,29 +75,37 @@ class Home extends Component{
                     <div className="home-content">
                         <div className="home-l home-c-g">
                             <div>
+                                <div id="img-1" className="img-g"></div>
                                 <Link to='/basicBrowse' className="">基本信息</Link> 
                             </div>
                             <div>
+                                <div id="img-2" className="img-g"></div>
                                 <Link to='/home' className="">假期信息</Link> 
                             </div>
                             <div>
+                                <div id="img-3" className="img-g"></div>
                                 <Link to='/home' className="">餐费查询</Link> 
                             </div>
                             <div>
+                                <div id="img-4" className="img-g"></div>
                                 <Link to='/basicQuery' className="">员工查询</Link> 
                             </div>
                             <div>
+                                <div id="img-5" className="img-g"></div>
                                 <Link to='/home' className="">组织架构</Link> 
                             </div>
                             <div>
+                                <div id="img-6" className="img-g"></div>
                                 <Link to='/home' className="">实习生薪资调整申请</Link> 
                             </div>
                         </div>
                         <div className="home-r home-c-g">                            
                             <div>
+                                <div id="img-7" className="img-g"></div>
                                 <Link to='/home' className="">上班</Link> 
                             </div>
                             <div>
+                                <div id="img-8" className="img-g"></div>
                                 <Link to='/home' className="">下班</Link> 
                             </div>
                         </div>                    

@@ -42,7 +42,7 @@ class Header extends Component{
         return (
             <div id="header-container">
                 <div id="header-l">
-                    <i className="fa-reorder">i</i>
+                    {/* <i className="fa-reorder">i</i> */}
                     <span>员工自主服务平台</span>
                 </div>
                 <div id="header-r">

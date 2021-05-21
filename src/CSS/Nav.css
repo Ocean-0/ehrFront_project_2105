@@ -10,8 +10,10 @@
 .nav-header{
     width: 199px;
     height: 60px;
-    background: url('../IMG//avengers_gaitubao_169x60.png') no-repeat;
-    background-position-x: 15px;
+    /* background: url('../IMG//avengers_gaitubao_169x60.png') no-repeat; */
+    /* background: url('../IMG/nchk.jpg') no-repeat; */
+    background: url('../IMG/nchk_gaitubao_60x60.jpg') no-repeat;
+    background-position-x: 55px;
 }
 .nav-g:active{
     color: white;
