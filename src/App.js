@@ -11,6 +11,7 @@ import BasicUpdate from './container/basic/BasicUpdate'
 import BasicQuery from './container/basic/BasicQuery'
 import AnAbility from './container/analysis/AnAbility'
 import AttBrowse from './container/attendance/AttBrowse'
+import NoticeBrowse from './container/notice/NoticeBrowse'
 
 import './App.css';
 
@@ -49,6 +50,9 @@ class App extends Component{
             </Route>
             <Route path='/anAbility'>
                 <AnAbility />
+            </Route>
+            <Route path='/noticeBrowse'>
+                <NoticeBrowse />
             </Route>
           </Switch>
 

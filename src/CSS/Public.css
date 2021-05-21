@@ -8,3 +8,24 @@
     height: 2px;
     background: rgba(219, 219, 219, 0.384);
 }
+
+/* 箭头图标 */
+.arrow-down{
+    display: inline-block;
+    background-image: url('../IMG/arrow-down_25x25.png');
+    width: 25px;
+    height: 25px;
+    position: relative;
+    right: 5px;
+    top: 5px;
+    border-top: 1px #fff solid;
+    border-left: 1px #fff solid;
+    border-bottom: 1px rgb(223, 222, 222) solid;
+    border-right: 1px rgb(223, 222, 222) solid;
+}
+.arrow-down:hover{
+    border-top: 1px rgb(223, 222, 222) solid;
+    border-left: 1px rgb(223, 222, 222) solid;
+    border-bottom: 1px #fff solid;
+    border-right: 1px #fff solid;
+}

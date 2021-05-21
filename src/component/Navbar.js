@@ -55,7 +55,7 @@ class Navbar extends Component{
                     </div>
                     <Link className="nav-g" onClick={this.showDetail.bind(this,"06")}>公告管理</Link>                
                     <div id="06" className="nav-d" style={{ display: 'none' }} data-show='true'>
-                        <Link to='/home' className="nav-d-c">首页</Link>    
+                        <Link to='/noticeBrowse' className="nav-d-c">首页</Link>    
                     </div>
                     <Link className="nav-g" onClick={this.showDetail.bind(this,"07")}>招聘管理</Link>                
                     <div id="07" className="nav-d" style={{ display: 'none' }} data-show='true'>
