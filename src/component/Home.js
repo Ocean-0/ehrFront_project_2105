@@ -20,8 +20,13 @@ class Home extends Component{
             bData:{}
         }
     }
+    componentDidUpdate(){
+        this.reqBack();
+    }
     componentDidMount(){
-        console.log('home didmount: ',this.props)
+        this.reqBack();
+    }
+    reqBack = () =>{
         reqPersonal(Qs.stringify({
             account: this.props.dataContainer.loginAcc,
             token: 'home login'+Math.random()
@@ -49,7 +54,6 @@ class Home extends Component{
         });
 
     }
-
     render(){
         console.log('home props:',this.props)
         // 不能及时更新

@@ -48,6 +48,9 @@ class AnAility extends Component{
         this.pentagon_instance.setOption(pentagon)
         // pentagon01.setOption(pentagon)
     }
+    // componentDidUpdate(){
+    //     this.reqBack();
+    // }
     componentDidMount(){
         reqAnSex(Qs.stringify({
             account: 666,
@@ -81,7 +84,6 @@ class AnAility extends Component{
             console.log('网络错误,请重试', e)
         });
 
-
         var chartDom = document.getElementById('pie');
         var myChart = echarts.init(chartDom);
         myChart.setOption(pie)
@@ -94,7 +96,10 @@ class AnAility extends Component{
         var pentagon01 = echarts.init(pentagon01Dom);
         this.pentagon_instance = pentagon01;
         pentagon01.setOption(pentagon)
+
     }
+    // reqBack = () => {
+    // }
     render(){
         // pie.series[0].data['0'].value = 9;
         // pie.series[0].data['1'].value = 1;

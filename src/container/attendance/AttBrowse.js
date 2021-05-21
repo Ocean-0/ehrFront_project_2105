@@ -18,8 +18,14 @@ class AttBrowse extends Component{
             error:''
         }
     }
+    componentDidUpdate(){
+        this.reqBack();
+    }
+
     componentDidMount(){
-        console.log(this.props.dataContainer.loginAcc)
+        this.reqBack();
+    }
+    reqBack = () => {
         reqAttCount(Qs.stringify({
             account: this.props.dataContainer.loginAcc,
             token: 'home login'+Math.random()
