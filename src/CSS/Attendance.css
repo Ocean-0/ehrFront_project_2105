@@ -24,9 +24,25 @@
 
 
 .att-c{
-    height: 500px;
+    height: 385px;
 }
 
 .ant-tabs {
     overflow: visible;
   }
+
+.att-c-header{
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    line-height: 50px;
+}
+.att-c-header>span{
+    flex-basis: 150px;
+}
+.font-b{
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+}
