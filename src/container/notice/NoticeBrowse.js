@@ -30,7 +30,9 @@ class NoticeBrowse extends Component{
             elementId.setAttribute("data-show", 'true');
         }
     }
-    
+    deleteNotice = (id) => {
+        console.log('delete notice',id)
+    }
     componentDidMount(){
         reqNotice(Qs.stringify({
             account: 666,
@@ -73,6 +75,7 @@ class NoticeBrowse extends Component{
                             <p dangerouslySetInnerHTML={{ __html: art03 }}></p>
                             <p dangerouslySetInnerHTML={{ __html: art04 }}></p>
                             <p dangerouslySetInnerHTML={{ __html: art05 }}></p>
+                            <div className="notice-btn" onClick={context.deleteNotice.bind(context,d.rowId)}>删除</div>
                         </div>
                     </div>
                 );
